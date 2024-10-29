@@ -15,7 +15,7 @@
             "value": {
               "enabled": false,
               "method": "266",
-              "mpMin": 20,
+              "mpMin": 30,
               "mpMax": 100,
               "hpMin": 0,
               "hpMax": 80,
