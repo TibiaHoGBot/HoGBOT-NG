@@ -1,9 +1,7 @@
 local bt               = require('libs/behaviourtree/behaviour_tree')
-local json             = require("cjson")
-local projectFile      = "hog.b3"
-local registerHogNodes = require("bot_modules/bt_nodes")
+local registerHogNodes = require("bt/bt_nodes")
 
-local function createTree(state, debug)
+local function createTree(state, projectFile, jsonLib, debug)
   if not state or type(state) ~= "table" then
     print("behaviour_tree: must be a valid state")
     return
@@ -16,7 +14,7 @@ local function createTree(state, debug)
     return
   end
 
-  local projectJsonTable = json.decode(file:read("*a"))
+  local projectJsonTable = jsonLib.decode(file:read("*a"))
 
   file:close()
 

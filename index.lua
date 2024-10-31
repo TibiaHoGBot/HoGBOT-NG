@@ -4,12 +4,14 @@ if home then
   package.cpath = package.cpath .. ";" .. home .. "/.luarocks/lib/lua/5.3/?.so"
 end
 
+local projectFile = "hog.b3"
+
 local webviewLib = require('webview')
 local jsonLib = require("cjson")
 local utils = require("webview-launcher")
-
 local api = require("bot_modules/api")
-local createBhTree = require("bot_modules/bt_init")
+
+local createBhTree = require("bt/bt_init")
 
 local state = {
   healer = {
@@ -32,7 +34,7 @@ local state = {
   mp = -1,
 }
 
-local bhtree = createBhTree(state, true)
+local bhtree = createBhTree(state, projectFile, jsonLib, true)
 
 if not bhtree then
   os.exit(0)
@@ -49,7 +51,7 @@ local options = {
     updateState = api.updateState
   },
   context = {
-    dialog = dialog,
+    -- dialog = dialog,
     jsonLib = jsonLib,
     state = state
   },
