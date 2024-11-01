@@ -1,5 +1,5 @@
 local bt               = require('libs/behaviourtree/behaviour_tree')
-local registerHogNodes = require("bt/bt_nodes")
+local registerHogNodes = require("bot_modules/behaviour/nodes")
 
 local function createTree(state, projectFile, jsonLib, debug)
   if not state or type(state) ~= "table" then

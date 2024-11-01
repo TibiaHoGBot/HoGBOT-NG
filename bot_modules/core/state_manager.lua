@@ -1,4 +1,4 @@
-local helpers = require("bot_modules/helpers")
+local helpers = require("bot_modules/core/helpers")
 
 local stateManager = {}
 

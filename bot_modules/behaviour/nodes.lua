@@ -2,14 +2,14 @@ local Task      = require('libs/behaviourtree/node_types/node')
 local Decorator = require('libs/behaviourtree/node_types/decorator')
 local bt        = require('libs/behaviourtree/behaviour_tree')
 
-local lib       = require("library/lib")
+local std       = require("standard")
 
 function Heal(config)
   local props = config.properties
   local rule = props.rule
 
   config.run = function(task, state)
-    local hp = lib.getHp()
+    local hp = std.getHp()
     print(hp)
     print(rule().name)
     task:success()

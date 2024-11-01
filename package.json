@@ -9,6 +9,6 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "luabundle": "github:Sh-u/luabundle"
+    "luabundle": "^1.7.0"
   }
 }

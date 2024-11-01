@@ -9,9 +9,9 @@ local projectFile = "hog.b3"
 local webviewLib = require('webview')
 local jsonLib = require("cjson")
 local utils = require("webview-launcher")
-local api = require("bot_modules/api")
+local api = require("bot_modules/core/api")
 
-local createBhTree = require("bt/bt_init")
+local createBhTree = require("bot_modules/behaviour/init")
 
 local state = {
   healer = {
